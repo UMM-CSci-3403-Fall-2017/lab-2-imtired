@@ -24,7 +24,7 @@ char* disemvowel(char* str) {
 	}
 
 	int j = 0;
-	char* toReturn = (char*) malloc (consonants);//makes the new string, of the correct length
+	char* toReturn = (char*) malloc(consonants + 1);//makes the new string, of the correct length
 	/* this loop puts the non-vowel characters in the new string */
         for(i = 0; i < leng; i = i + 1 ){
 		if(check_not_vowel(str[i])){
@@ -35,7 +35,7 @@ char* disemvowel(char* str) {
 	toReturn[j] = '\0';
 
 //	printf("%s\n",toReturn);
-	free (toReturn);
+
 	return (char*) toReturn;
 }
 
